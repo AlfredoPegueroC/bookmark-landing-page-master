@@ -1,17 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-*, *::before, *::after{
-box-sizing: border-box;
+:root {
+  --primary-color: hsl(231, 69%, 60%);
+  --grey-50: hsl(0, 0%, 97%);
+  --red-400: hsl(0, 94%, 66%);
 }
-img, video, svg {
-display: block;
-height: auto;
-max-width: 100%;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 body {
-margin: 0;
-min-height: 100dvh
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  min-height: 100dvh;
 }
-h1, h2, h3, h4, h5, h6{
-text-wrap: balance;
+
+p {
+  text-wrap: pretty;
 }
-p{text-wrap: pretty;}
+.container {
+  padding: 0 1.5rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+.nav-items {
+  display: none;
+}
+.hero {
+  margin-top: 2rem;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: hsla(0, 0%, 0%, 0.662);
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.cta a,
+.extension a, 
+.btn {
+  text-decoration: none;
+  color: var(--grey-50);
+  background-color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.cta a:last-child {
+  background-color: var(--grey-50);
+  color: hsla(0, 0%, 0%, 0.662);
+  /* border: 1px solid var(--primary-color); */
+}
+.features {
+  margin-top: 6rem;
+}
+.feature {
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  display: none;
+}
+
+.feature-header,
+.questions {
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.feature p,
+.feature-header p,
+.extension p,
+.questions p {
+  font-size: 1rem;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: hsla(0, 0%, 0%, 0.662);
+}
+.feature.active {
+  display: block;
+}
+.feature-icon {
+  margin-bottom: 5rem;
+}
+.features-tabs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.features-tabs .tab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 1.25rem 2rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.25rem;
+  border-top: 1px solid hsla(0, 2%, 12%, 0.16);
+  border-bottom: 1px solid hsla(0, 2%, 12%, 0.16);
+  color: hsla(0, 0%, 0%, 0.662);
+}
+
+.features-tabs .tab.active {
+  color: #000;
+}
+.features-tabs .tab.active::after {
+  content: "";
+  display: block;
+  width: 37%;
+  height: 4px;
+  background-color: var(--red-400);
+  position: absolute;
+  bottom: -0.1rem;
+}
+.extension {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.extension .card {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  outline: 1px solid hsla(0, 2%, 12%, 0.16);
+  border-radius: 10px;
+}
+.card-dots {
+  margin-block: 1.5rem;
+}
+.questions {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.question h3 {
+  font-size: 1rem;
+}
+.question-item {
+  cursor: pointer;
+}
+.question p {
+  display: none;
+}
+.question p.active {
+  display: block;
+}
+.question-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid hsla(0, 2%, 12%, 0.16);
+}
+.questions-list {
+  margin-block: 2rem;
+}
