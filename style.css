@@ -4,6 +4,7 @@
   --primary-color: hsl(231, 69%, 60%);
   --grey-50: hsl(0, 0%, 97%);
   --red-400: hsl(0, 94%, 66%);
+  --blue-900: hsl(231, 32%, 21%);
 }
 
 *,
@@ -192,6 +193,10 @@ p {
 .question-item {
   cursor: pointer;
 }
+
+.question-item h3 {
+  text-align: left;
+}
 .question p {
   display: none;
 }
@@ -207,4 +212,98 @@ p {
 }
 .questions-list {
   margin-block: 2rem;
+}
+.email{
+  background-color: var(--primary-color);
+  margin-inline: -2rem;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 6rem;
+}
+.email h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 4rem;
+  margin-bottom: -1rem;
+  letter-spacing: 5px;
+}
+.email p {
+  font-size: 1.5rem;
+  padding: 0 .5rem;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+}
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  margin-top: -2rem;
+}
+.email-form input {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  width: 100%;
+  color: var(--grey-50);
+  /* max-width: 400px; */
+  width: 100%;
+}
+.email-form button {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--red-400);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--blue-900);
+  margin-inline: -2rem;
+  padding-inline: 2rem;
+  gap: 2rem;
+}
+
+.footer .links{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+.footer .links a{
+  text-decoration: none;
+  color: var(--grey-50);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.footer .social-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
 }
