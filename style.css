@@ -3,6 +3,7 @@
 :root {
   --primary-color: hsl(231, 69%, 60%);
   --grey-50: hsl(0, 0%, 97%);
+  --grey-500: hsla(0, 1%, 26%, 0.699);
   --red-400: hsl(0, 94%, 66%);
   --blue-900: hsl(231, 32%, 21%);
 }
@@ -28,6 +29,7 @@ body {
 
 p {
   text-wrap: pretty;
+  color: var(--grey-500);
 }
 .container {
   padding: 0 1.5rem;
@@ -43,6 +45,9 @@ p {
 }
 .hero {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: hsl(231, 32%, 21%);
 }
 .hero-content {
   display: flex;
@@ -57,7 +62,7 @@ p {
   font-size: 1rem;
   padding: 0 1rem;
   line-height: 1.5;
-  color: hsla(0, 0%, 0%, 0.662);
+  color: var(--grey-500);
 }
 
 .cta {
@@ -66,7 +71,7 @@ p {
   margin-top: 1.5rem;
 }
 .cta a,
-.extension a, 
+.extension a,
 .btn {
   text-decoration: none;
   color: var(--grey-50);
@@ -83,6 +88,10 @@ p {
 }
 .features {
   margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .feature {
   padding-inline: 1rem;
@@ -104,6 +113,7 @@ p {
   align-items: center;
   text-align: center;
   padding: 1rem;
+  color: hsl(231, 32%, 21%);
 }
 
 .feature p,
@@ -113,7 +123,7 @@ p {
   font-size: 1rem;
   padding: 0 1rem;
   line-height: 1.5;
-  color: hsla(0, 0%, 0%, 0.662);
+  color: var(--grey-500);
 }
 .feature.active {
   display: block;
@@ -213,10 +223,10 @@ p {
 .questions-list {
   margin-block: 2rem;
 }
-.email{
+.email {
   background-color: var(--primary-color);
-  margin-inline: -2rem;
-  padding-inline: 2rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,10 +244,11 @@ p {
 }
 .email p {
   font-size: 1.5rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   line-height: 1.5;
   text-align: center;
   font-weight: 500;
+  color: white;
 }
 .email-form {
   display: flex;
@@ -255,7 +266,7 @@ p {
   border-radius: 0.25rem;
   border: none;
   width: 100%;
-  color: var(--grey-50);
+  color: var(--grey-500);
   /* max-width: 400px; */
   width: 100%;
 }
@@ -272,8 +283,7 @@ p {
   width: 100%;
 }
 
-
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,12 +291,12 @@ p {
   flex-direction: column;
   padding: 2rem;
   background-color: var(--blue-900);
-  margin-inline: -2rem;
-  padding-inline: 2rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   gap: 2rem;
 }
 
-.footer .links{
+.footer .links {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -294,14 +304,14 @@ p {
   gap: 2.5rem;
   margin-bottom: 1rem;
 }
-.footer .links a{
+.footer .links a {
   text-decoration: none;
   color: var(--grey-50);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.footer .social-media{
+.footer .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
