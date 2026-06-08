@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
@@ -15,6 +17,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
 </head>
+
 <body>
   <main class="container">
 
@@ -23,8 +26,18 @@
       <div class="logo">
         <img src="./images/logo-bookmark.svg" alt="Bookmark logo">
       </div>
-      <img src="./images/icon-hamburger.svg" alt="hamburger menu" class="hamburger">
+      <button class="hamburger-btn">
+        <img src="./images/icon-hamburger.svg" alt="hamburger menu" class="hamburger">
+      </button>
+
       <div class="nav-items">
+        <div class="logo-mobile">
+          <img src="./images/logo-bookmark-white.svg" alt="Bookmark logo">
+          <button class="close-menu">
+            <img src="./images/icon-close.svg" alt="close menu icon">
+          </button>
+        </div>
+
         <ul class="nav-links">
           <li><a href="#">Features</a></li>
           <li><a href="#">Pricing</a></li>
@@ -33,15 +46,21 @@
         <div class="login">
           <a href="#">Login</a>
         </div>
+
+        <div class="mobile-social">
+          <img src="./images/icon-facebook.svg" alt="facebook logo">
+          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter logo"></a>
+        </div>
       </div>
-        
+
     </nav>
 
     <section class="hero">
       <img src="./images/illustration-hero.svg" alt="illustration of a person using a computer" class="hero-image">
       <div class="hero-content">
         <h1>A Simple Bookmark Manager</h1>
-        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+          load instantly. Try it for free.</p>
         <div class="cta">
           <a href="#" class="btn btn-primary">Get it on Chrome</a>
           <a href="#" class="btn btn-secondary">Get it on Firefox</a>
@@ -49,47 +68,52 @@
     </section>
 
     <section class="features">
-        <div class="feature-header">
-          <h2>Features</h2>
-          <p>Our aim is to make it quick and easy to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go</p>
+      <div class="feature-header">
+        <h2>Features</h2>
+        <p>Our aim is to make it quick and easy to access your favourite websites. Your bookmarks sync between your
+          devices so you can access them on the go</p>
+      </div>
+
+      <div class="features-tabs">
+        <button class="tab">Simple Bookmarking</button>
+        <button class="tab active">Speedy Searching</button>
+        <button class="tab">Easy Sharing</button>
+      </div>
+
+      <div class="feature active">
+        <img src="./images/illustration-features-tab-1.svg" alt="bookmark icon" class="feature-icon">
+        <div class="feature-description">
+          <h2>Bookmark in one click</h2>
+          <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control
+            over how you manage your favourite sites.</p>
         </div>
 
-        <div class="features-tabs">
-          <button class="tab">Simple Bookmarking</button>
-          <button class="tab active">Speedy Searching</button>
-          <button class="tab">Easy Sharing</button>
-        </div>
+      </div>
 
-        <div class="feature active">
-          <img src="./images/illustration-features-tab-1.svg" alt="bookmark icon" class="feature-icon">
-          <div class="feature-description">
-            <h2>Bookmark in one click</h2>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-          </div>
-          
+      <div class="feature">
+        <img src="./images/illustration-features-tab-2.svg" alt="search icon" class="feature-icon">
+        <div class="feature-description">
+          <h2>Intelligent search</h2>
+          <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all
+            of your bookmarks.</p>
         </div>
-  
-        <div class="feature">
-          <img src="./images/illustration-features-tab-2.svg" alt="search icon" class="feature-icon">
-          <div class="feature-description">
-            <h2>Intelligent search</h2>
-            <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-          </div>
+      </div>
+
+      <div class="feature">
+        <img src="./images/illustration-features-tab-3.svg" alt="share icon" class="feature-icon">
+        <div class="feature-description">
+          <h2>Share your bookmarks</h2>
+          <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
+            click of a button.</p>
         </div>
-  
-        <div class="feature">
-          <img src="./images/illustration-features-tab-3.svg" alt="share icon" class="feature-icon">
-          <div class="feature-description">
-            <h2>Share your bookmarks</h2>
-            <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-          </div>
-        </div>
+      </div>
     </section>
 
 
     <section class="extension">
       <h2>Download the extension</h2>
-      <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+      <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
+        prioritize.</p>
       <div class="extension-cards">
         <div class="card">
           <img src="./images/logo-chrome.svg" alt="chrome logo" class="card-logo">
@@ -119,7 +143,8 @@
 
     <section class="questions">
       <h2>Frequently Asked Questions</h2>
-      <p>Here are some of our FAQs. If you have any other quesitons you'd like answered please feel free to email us.</p>
+      <p>Here are some of our FAQs. If you have any other quesitons you'd like answered please feel free to email us.
+      </p>
 
       <div class="questions-list">
         <div class="question">
@@ -128,7 +153,8 @@
             <img src="./images/icon-arrow.svg" alt="arrow icon" class="question-icon">
           </div>
 
-          <p>A bookmark is a saved link to a website that you can easily access later. It allows you to quickly navigate to your favorite websites without having to remember the URL.</p>
+          <p>A bookmark is a saved link to a website that you can easily access later. It allows you to quickly navigate
+            to your favorite websites without having to remember the URL.</p>
         </div>
 
         <div class="question">
@@ -136,16 +162,18 @@
             <h3>How can I organize my bookmarks?</h3>
             <img src="./images/icon-arrow.svg" alt="arrow icon" class="question-icon">
           </div>
-          <p>You can organize your bookmarks by creating folders and subfolders. This allows you to categorize your bookmarks based on topics, interests, or any other criteria you prefer.</p>
+          <p>You can organize your bookmarks by creating folders and subfolders. This allows you to categorize your
+            bookmarks based on topics, interests, or any other criteria you prefer.</p>
         </div>
 
 
         <div class="question">
           <div class="question-item">
             <h3>How do I edit a bookmark?</h3>
-            <img src="./images/icon-arrow.svg" alt="arrow icon" class="question-icon"> 
+            <img src="./images/icon-arrow.svg" alt="arrow icon" class="question-icon">
           </div>
-          <p>To edit a bookmark, simply right-click on the bookmark and select the "Edit" option. Alternatively, you can go to your browser's bookmark manager and modify the bookmark from there.</p>
+          <p>To edit a bookmark, simply right-click on the bookmark and select the "Edit" option. Alternatively, you can
+            go to your browser's bookmark manager and modify the bookmark from there.</p>
         </div>
 
         <div class="question">
@@ -153,7 +181,9 @@
             <h3>Can I share my bookmarks with others?</h3>
             <img src="./images/icon-arrow.svg" alt="arrow icon" class="question-icon">
           </div>
-          <p>Yes, you can share your bookmarks with others by exporting them as a file or by using browser extensions that allow for sharing. This way, you can easily share your favorite websites with friends or colleagues.</p>
+          <p>Yes, you can share your bookmarks with others by exporting them as a file or by using browser extensions
+            that allow for sharing. This way, you can easily share your favorite websites with friends or colleagues.
+          </p>
         </div>
       </div>
 
@@ -171,25 +201,26 @@
 
     <footer class="footer">
       <img src="./images/logo-bookmark-white.svg" alt="bookmark logo" class="bookmark-logo">
-        <div class="links">
-          <a href="#">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="social-media">
-          <a href="#"><img src="./images/icon-facebook.svg" alt="facebook logo"></a>
-          <a href="#"><img src="./images/icon-twitter.svg" alt="twitter logo"></a>
-        </div>
+      <div class="links">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#"><img src="./images/icon-facebook.svg" alt="facebook logo"></a>
+        <a href="#"><img src="./images/icon-twitter.svg" alt="twitter logo"></a>
+      </div>
     </footer>
   </main>
 
 
 
-    <script src="app.js"></script>
-  
-      <!-- <footer class="attribution">
+  <script src="app.js"></script>
+
+  <!-- <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </footer> -->
 </body>
+
 </html>

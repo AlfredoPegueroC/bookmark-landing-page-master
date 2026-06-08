@@ -40,6 +40,15 @@
     font-size: 0.9rem;
     color: hsl(231, 32%, 21%);
   }
+  .nav-links a:hover {
+    color: var(--red-400);
+  }
+
+  .login a:hover {
+    background-color: var(--red-500);
+    outline: 1px solid red;
+    color: var(--red-400);
+  }
 
   /* HERO SECTION */
 
